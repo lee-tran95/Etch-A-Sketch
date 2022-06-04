@@ -1,0 +1,10 @@
+.outter{
+    display:flex;
+    height: 400px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.square{
+    background: black;
+    flex: 1 0 25%;
+}
