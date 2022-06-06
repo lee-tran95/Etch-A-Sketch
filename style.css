@@ -1,10 +1,13 @@
 .outter{
     display:flex;
     height: 400px;
+    width: 400px;
     flex-wrap: wrap;
     flex-direction: column;
+    margin: 0 auto;
+    border: 5px solid black;
 }
 .square{
-    background: black;
-    flex: 1 0 25%;
+    background: white;
+    flex: 1 0 6.25%;
 }
