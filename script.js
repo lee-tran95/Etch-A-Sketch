@@ -7,6 +7,15 @@ let numberOfSquare = 0;
 
 let grid = document.querySelector('.outter');
 
+let mousedown = false;
+
+document.addEventListener('mousedown', () => {
+    mousedown = true;
+})
+document.addEventListener('mouseup', () => {
+    mousedown = false;
+})
+
 function removeGrid(parent){
     while(parent.firstChild){
         parent.removeChild(parent.firstChild);
@@ -27,14 +36,6 @@ function createGrid(){
         grid.appendChild(square)
     }
     let squares = document.querySelectorAll('.square');
-    let mousedown = false;
-
-    document.addEventListener('mousedown', () => {
-        mousedown = true;
-    })
-    document.addEventListener('mouseup', () => {
-        mousedown = false;
-    })
 
     squares.forEach(square => {
         square.addEventListener('mouseenter',() => {
@@ -45,5 +46,14 @@ function createGrid(){
     })
 }
 
+let clear = document.querySelector('.clearButton')
+clear.addEventListener('click', clearGrid)
+
+function clearGrid(){
+    let squares = document.querySelectorAll('.square');
+    squares.forEach(square => {
+        square.style.background = "white";
+    })
+}
 
 
