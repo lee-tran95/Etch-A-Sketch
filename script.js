@@ -17,10 +17,12 @@ function createGrid(){
     removeGrid(grid);
 
     numberOfSquare = prompt("Enter the number of square for each side")
+    let basis = (1/numberOfSquare)*100;
 
-    for(let i = 0; i < numberOfSquare; i++){
+    for(let i = 0; i < numberOfSquare*numberOfSquare; i++){
         let square = document.createElement('div');
         square.classList.add('square')
+        square.style.flex = `1 0 ${basis}%`
         square.setAttribute('onmousedown', 'return false')
         grid.appendChild(square)
     }

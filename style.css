@@ -9,7 +9,6 @@
 }
 .square{
     background: white;
-    flex: 1 0 6.25%;
 }
 .numSquare{
     display:flex;
