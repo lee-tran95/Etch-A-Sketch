@@ -1,7 +1,7 @@
 .outter{
     display:flex;
-    height: 400px;
-    width: 400px;
+    height: 600px;
+    width: 600px;
     flex-wrap: wrap;
     flex-direction: column;
     margin: 0 auto;
@@ -9,6 +9,7 @@
 }
 .square{
     background: white;
+    border: 1px solid black;
 }
 .numSquare{
     display:flex;

@@ -22,17 +22,16 @@ function removeGrid(parent){
 let promptButton = document.querySelector('.numSquare');
 
 promptButton.addEventListener('click', createGrid);
-
 function createGrid(){
     removeGrid(grid);
 
     numberOfSquare = prompt("Enter the number of square for each side")
-    let basis = (1/numberOfSquare)*100;
+    let basis = (600/numberOfSquare)-2;
 
     for(let i = 0; i < numberOfSquare*numberOfSquare; i++){
         let square = document.createElement('div');
         square.classList.add('square')
-        square.style.flex = `1 0 ${basis}%`
+        square.style.flex = `1 0 ${basis}px`
         square.setAttribute('onmousedown', 'return false')
         grid.appendChild(square)
     }
