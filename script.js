@@ -1,7 +1,4 @@
 
-let promptButton = document.querySelector('.numSquare');
-
-promptButton.addEventListener('click', createGrid);
 
 let numberOfSquare = 0;
 
@@ -21,6 +18,10 @@ function removeGrid(parent){
         parent.removeChild(parent.firstChild);
     }
 }
+
+let promptButton = document.querySelector('.numSquare');
+
+promptButton.addEventListener('click', createGrid);
 
 function createGrid(){
     removeGrid(grid);
