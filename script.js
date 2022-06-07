@@ -7,10 +7,17 @@ let numberOfSquare = 0;
 
 let grid = document.querySelector('.outter');
 
+function removeGrid(parent){
+    while(parent.firstChild){
+        parent.removeChild(parent.firstChild);
+    }
+}
 
 function createGrid(){
+    removeGrid(grid);
+
     numberOfSquare = prompt("Enter the number of square for each side")
-    console.log(numberOfSquare)
+
     for(let i = 0; i < numberOfSquare; i++){
         let square = document.createElement('div');
         square.classList.add('square')
